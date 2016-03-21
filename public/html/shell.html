@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<title>Matt Ray Portfolio</title>
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!-- custom styles -->
+<link rel="stylesheet" href="../css/styles.css">
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<!-- bootstrap js -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- angular -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.js"></script>
+<!-- angular routing -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.min.js"></script>
+<!-- angular module -->
+<script src="../js/ang.js"></script>
+<!-- all controllers -->
+<script src="../js/mainController.js"></script>
+<script src="../js/headerController.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <ng-include src=" '/html/header.html' "></ng-include>
+    
+    <div ng-view></div>
+
+    <ng-include src=" '/html/footer.html' "></ng-include>
+</body>
+</html>

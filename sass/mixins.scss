@@ -1,0 +1,7 @@
+
+
+
+@mixin backdrop ($backColor) {
+    background-color: $backColor;
+    background-image: url('../images/clean-gray-paper.png');
+}

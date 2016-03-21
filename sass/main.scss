@@ -1,0 +1,11 @@
+//import other sass files
+@import 'variables.scss';
+@import 'mixins.scss';
+
+
+h1 {
+    color: $mainColor;
+}  
+.container-fluid {
+    @include backdrop($backColor);
+} 
