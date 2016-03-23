@@ -2,10 +2,29 @@
 @import 'variables.scss';
 @import 'mixins.scss';
 
-
+*{
+    box-sizing: border-box;
+    font-size: 12px;
+}
 h1 {
     color: $mainColor;
+    font-size: 3em;
+    font-family: $headFont;
 }  
 .container-fluid {
     @include backdrop($backColor);
 } 
+//navbar stuff
+.navigation {
+    margin: 0;
+    border: 1px solid black;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-item {
+    float: left;
+    list-style: none;
+    font-size: 1.4em;
+    font-family: $headFont;
+}
