@@ -1,13 +1,18 @@
 <header ng-controller="headerController" class="head-container">
-    <a href="/#"><h1>Matt Ray</h1></a>
-    <h3>Web developer</h3>
+    <img class="logo" src="../images/circles.png" alt="circles-logo">
+    <a href="/#/"><h1 class="title">Matt Ray</h1></a>
+    <h3 class="sub-title">Web developer</h3>
     <div class="header">
+
         <ul class="navigation">
             <a href="/#/about"><li class="nav-item">About</li></a>
             <a href="/#/projects"><li class="nav-item">Projects</li></a>
             <a href="/#/resources"><li class="nav-item">Resources</li></a>
             <a href="/#/contact"><li class="nav-item">Contact</li></a>
-            <span></span>
+            <span>
+                <div class="triangle-right" id="tri-back"></div>
+                <div class="triangle-right" id="tri-front"></div>
+            </span>
         </ul>
     </div>
 </header>

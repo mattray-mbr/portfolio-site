@@ -2,29 +2,155 @@
 @import 'variables.scss';
 @import 'mixins.scss';
 
+
+//------------------ general styles ------------------
 *{
     box-sizing: border-box;
     font-size: 12px;
 }
-h1 {
-    color: $mainColor;
-    font-size: 3em;
-    font-family: $headFont;
-}  
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+ul {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: black;
+    &:hover {
+        text-decoration: none;
+    }
+    &:active {
+        text-decoration: none;
+    }
+}
 .container-fluid {
     @include backdrop($backColor);
+    border-top:1px solid $accentColor;
 } 
-//navbar stuff
+//------------------header ---------------------------
+header {
+    background-color: $subtleColor;
+    padding-bottom: 10px;
+}
+.title {
+    font-family: $headFont;
+    color: $mainColor; 
+    font-size: 3.4em;
+    margin: 10px; 
+    margin-bottom: 0;
+    display: inline-block;
+}
+.sub-title {
+    margin: 0 0 15px 60px;
+}
+.logo { 
+    width: 120px;
+    height: 120px;
+    float: right;
+    margin: 5px 25px;
+}
+//------------------navbar stuff ---------------------
 .navigation {
-    margin: 0;
-    border: 1px solid black;
+    border-top: 1px solid $mainColor;
+    border-bottom: 1px solid $mainColor;
     width: 80%;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 4;
+    background-color: #fff;
 }
 .nav-item {
     float: left;
     list-style: none;
-    font-size: 1.4em;
+    font-size: 1.6em;
     font-family: $headFont;
+    padding: 0 15px;
+    &:hover {
+        background-color: $mainColor;
+        color: #fff;
+    }
+}
+.triangle-right {
+    float: right;
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: 1;
+}
+#tri-front {
+    border-top: 14px solid transparent;
+    border-left: 20px solid white;
+    border-bottom: 14px solid transparent;
+    margin-left: -1px;
+}
+#tri-back {
+    border-top: 14px solid transparent;
+    border-left: 24px solid $mainColor;
+    border-bottom: 14px solid transparent;
+}
+// ---------------------intro --------------------------
+.intro {
+    width: 70%;
+    margin: 30px auto;
+    background-color: #fff;
+    overflow: hidden;
+}
+.semi-circle {
+    width: 20px;
+    height: 20px;
+    @include backdrop($backColor);
+}
+#top-right {
+    float: right;
+    border-radius: 0 0 0 20px;
+}
+#top-left {
+    float: left;
+    border-radius: 0 0 20px 0;
+}
+#bot-right {
+    float: right; 
+    border-radius: 20px 0 0 0;
+}
+#bot-left {
+    float: left;
+    border-radius: 0 20px 0 0;
+}
+#intro-bio {
+    display: inline-block;
+    clear: both;
+    font-family: $headFont;
+    font-size: 1.3em;
+    margin: 0 25px;
+    font-style: italic;
+}
+// --------------------- footer ------------------------
+footer{
+    height: 50px;
+    background-color: $accentColor;
+    border-top: 1px solid $backColor;
+}
+.icon {
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    float: right;
+    margin: 5px;
+    border-radius: 20px;
+    border: 5px solid white;
+   background: url('../images/spritesheet.png'); 
+   &:hover {
+    border: 5px solid $mainColor;
+   }
+}
+#mail {
+    background-position: 544px 85px;
+}
+#github {
+    background-position: 143px 85px;
+}
+#linkedin {
+    background-position: 200px 85px;
 }
