@@ -47,8 +47,27 @@ header {
 .logo { 
     width: 120px;
     height: 120px;
-    float: right;
-    margin: 5px 25px;
+    margin: 5px 0; 
+    border-radius: 60px;
+}
+//image rotator
+.front {
+    backface-visibility: hidden;
+}
+.back {
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+}
+.back, .front {
+    transition: all, 1.5s;
+    position: absolute;
+    right: 10px;
+}
+.logo-spin:hover .front {
+    transform: rotateY(180deg);
+}
+.logo-spin:hover .back {
+    transform: rotateY(0deg);
 }
 //------------------navbar stuff ---------------------
 .navigation {
@@ -125,6 +144,24 @@ header {
     font-size: 1.3em;
     margin: 0 25px;
     font-style: italic;
+}
+// --------------------- content -----------------------
+.content {
+    width: 85%;
+    margin: 20px auto;
+    background-color: $subtleColor;
+    padding: 5px;
+}
+.showcase {
+    width: 80%;
+    height: 300px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+.showcase-img {
+    // max-width: 300px;
+    // max-height: 300px;
+    display: inline-block;
 }
 // --------------------- footer ------------------------
 footer{
