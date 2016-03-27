@@ -1,12 +1,19 @@
 <div class="container-fluid">
-
-
-    <form ng-submit="sendForm">
+    <div class="intro">
+        <div class="semi-circle top-right"></div>
+        <div class="semi-circle top-left"></div>
+        <p class="overview">Questions, comments, advice, or just want to get ahold of me?  Simply fill out the form below and I will get back to you as soon as I am able.</p>
+        <div class="semi-circle bot-right"></div>
+        <div class="semi-circle bot-left"></div>
+    </div>
+    <form ng-submit="sendEmail()">
         <label>Name</label>
-        <input type="text">
+        <input type="text" ng-model="name">
         <label>email</label>
-        <input type="email">
+        <input type="email" ng-model="email">
         <label>Message</label>
-        <textarea placeholder="please enter a message"></textarea>
+        <textarea placeholder="please enter a message" ng-model="message"></textarea>
+        <input class="submit-btn" type="submit" value="send">
+        <h3>{{returnMessage}}</h3>
     </form>
 </div>

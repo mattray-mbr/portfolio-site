@@ -112,6 +112,7 @@ header {
 // ---------------------intro --------------------------
 .intro {
     width: 70%;
+    max-width: 1150px;
     margin: 30px auto;
     background-color: #fff;
     overflow: hidden;
@@ -121,23 +122,23 @@ header {
     height: 20px;
     @include backdrop($backColor);
 }
-#top-right {
+.top-right {
     float: right;
     border-radius: 0 0 0 20px;
 }
-#top-left {
+.top-left {
     float: left;
     border-radius: 0 0 20px 0;
 }
-#bot-right {
+.bot-right {
     float: right; 
     border-radius: 20px 0 0 0;
 }
-#bot-left {
+.bot-left {
     float: left;
     border-radius: 0 20px 0 0;
 }
-#intro-bio {
+.overview {
     display: inline-block;
     clear: both;
     font-family: $headFont;
@@ -149,8 +150,12 @@ header {
 .content {
     width: 85%;
     margin: 20px auto;
-    background-color: $subtleColor;
+    background-color: darken($subtleColor, 5%);
     padding: 5px;
+}
+.section-title {
+    margin: 5px;
+    text-align: center;
 }
 .showcase {
     width: 80%;
@@ -162,6 +167,22 @@ header {
     // max-width: 300px;
     // max-height: 300px;
     display: inline-block;
+}
+// --------------------- form --------------------------
+form {
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid black;
+    background-color: $subtleColor;
+}
+label, input, textarea {
+    display: block;
+    font-size: 1.4em;
+    margin: 5px;
+    width: 50%;
+}
+.submit-btn {
+    width: 25%;
 }
 // --------------------- footer ------------------------
 footer{
@@ -186,8 +207,8 @@ footer{
     background-position: 544px 85px;
 }
 #github {
-    background-position: 143px 85px;
+    background-position: 143.5px 85px;
 }
 #linkedin {
-    background-position: 200px 85px;
+    background-position: 200.5px 85px;
 }

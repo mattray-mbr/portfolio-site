@@ -28,6 +28,8 @@ app.get('/', function(req, res) {
 
 app.get('/api/load', routes.load)
 
+app.post('/api/sendEmail', routes.sendEmail)
+
 // Creating Server and Listening for Connections 
 var port = 3173
 app.listen(port, function(){
