@@ -17,7 +17,7 @@ mongoose.connect('mongodb://localhost/portfolio');
 app.use(logger('dev')); //no idea what this does
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));  
 
 
 //--------------- Routes ---------------  

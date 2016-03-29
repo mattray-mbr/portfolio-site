@@ -1,17 +1,18 @@
 app.controller('mainController', ['$scope', '$http', function($scope, $http){
     $scope.test = "hello"
 
-    $scope.load = function(){
-        $http.get('/api/load').then(function(returnData){
-            $scope.test = returnData.data
-        })
-    }
+    // setInterval(function(){
+    //     console.log('rotate')
+    //     $scope.rotateFront = !$scope.rotateFront;
+    //     $scope.rotateBack = !$scope.rotateBack;
+    // }, 8000);
+
 
     $scope.sendEmail = function(){
         var email = {
-            name    : $scope.name,
-            email   : $scope.email, 
-            message : $scope.message, 
+            name    : $scope.name || 'none',
+            email   : $scope.email || 'none', 
+            message : $scope.message || 'none', 
         }
         console.log(email)
         $http.post('/api/sendEmail', email).then(function(returnData){

@@ -8,11 +8,11 @@
     </div>
     <form ng-submit="sendEmail()">
         <label>Name</label>
-        <input type="text" ng-model="name">
+        <input type="text" ng-model="name" required>
         <label>email</label>
-        <input type="email" ng-model="email">
+        <input type="email" ng-model="email" required>
         <label>Message</label>
-        <textarea placeholder="please enter a message" ng-model="message"></textarea>
+        <textarea placeholder="please enter a message" ng-model="message" required></textarea>
         <input class="submit-btn" type="submit" value="send">
         <h3>{{returnMessage}}</h3>
     </form>
