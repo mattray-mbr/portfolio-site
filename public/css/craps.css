@@ -1,0 +1,525 @@
+@import url(https://fonts.googleapis.com/css?family=Inknut+Antiqua:400,700);
+
+* {
+	box-sizing: border-box;
+}
+h2, h3, h4, h5, p, span {
+	font-family: Helvetica;
+}
+h1 {
+	margin-top: 0;
+}
+h3 {
+	margin: 0;
+	margin-bottom: 5px;
+	font-weight: bolder;
+}
+h2 {
+	margin: 0;
+}
+body {
+	padding-top: 20px;
+	background-color: #000;
+}
+li {
+	margin-top:0;
+	font-size: 20px;
+	color: #fff;
+}
+input {
+	width: 30px;
+}
+button {
+	list-style: none;
+	background-color: #fff;
+	border: none;
+}
+button:active {
+	outline:0;
+	background-image: none;
+}
+.all-container {
+	background: url(images/skyline.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	margin: 0;
+}
+@media(max-width:1000px){
+	.all-container {
+		background-size: cover;
+	}
+	.point-set {
+		font-size: 18px;
+	}
+}
+@media(max-width: 595px){
+	.point-set {
+		font-size: 14px;
+	}
+}
+.title {
+	color: #f0c427;
+	font-size: 60px;
+	margin: 20px;
+	font-family: 'Inknut+Antiqua';
+	font-style: italic;
+}
+.layout {
+	width: 1075px;
+	background-image: url('table-layout.jpg');
+	background-repeat: no-repeat;
+	border: 1px solid black;
+	height: 650px;
+	position: relative;
+	margin:0 auto;
+}
+.square {
+	border: 1px solid black;
+	padding: 0;
+}
+.roll {
+	margin-top: 20px;
+}
+.dicePic {
+	width: 64px;
+	height: 62px;
+	border: 1px solid black;
+	background: url(images/DiceSheet.png)-1px -3px;
+	border-radius: 5px;
+	margin: 10px;
+}
+.die1 {
+	background: url(images/DiceSheet.png)-1px -3px;
+}
+.die2 {
+	background: url(images/DiceSheet.png)317px -3px;
+}
+.die3 {
+	background: url(images/DiceSheet.png)254px -3px;
+}
+.die4 {
+	background: url(images/DiceSheet.png)190px -3px;
+}
+.die5 {
+	background: url(images/DiceSheet.png)126px -3px;
+}
+.die6 {
+	background: url(images/DiceSheet.png)63px -3px;
+}
+/* -------------- boxes ------------------------------------*/
+.box {
+	position: absolute;
+}
+.lightbox img {
+	display: block;
+	max-height: 900px;
+	margin: 0 auto;
+	border-radius: 20px;
+}
+.intro-btn {
+	display: block;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	width: 300px;
+	height: 150px;
+}
+.lightbox {
+	position: absolute;
+	background-color: #000;
+	z-index: 10;
+	border: 5px solid red;
+	border-radius: 20px;
+	box-shadow: 0 0 1000px  100px #f92;
+	max-height: 90vh;
+	overflow: hidden;
+	padding: 0;
+}
+.circle {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	/*float: right;*/
+	color: #fff;
+	font-weight: bold;
+	/*overflow: hidden;*/
+	background: url(images/chip.png);
+	padding-top:10px;
+	text-align: center;
+	position: relative;
+	z-index:5;
+}
+.odds-circle {
+	margin-left: 30px;
+}
+.invalid:hover {
+	border: 5px solid rgba(255, 51,51, .6);
+	/*border-color: rgba(255, 51,51, .6);*/
+}
+.valid:hover {
+	border: 5px solid rgba(50,204,51, .7);
+}
+#pass-bottom {
+	width: 710px;
+	height: 40px;
+	top: 572px;
+	left: 70px;
+}
+#pass-top {
+	width: 40px;
+	height: 432px;
+	top: 140px;
+	left:70px;
+}
+#dont-pass-bottom {
+	width: 655px;
+	height: 40px;
+	top: 518px;
+	left: 122px;
+	background-color:rgba(50,204,51, .7) ;
+}
+#dont-pass-top {
+	width:38px;
+	height: 433px;
+	top: 86px;
+	left: 123px;
+	background-color:rgba(50,204,51, .7) ;
+}
+#field {
+	width: 612px;
+	height: 165px;
+	top: 350px;
+	left: 164px;
+	background-color:rgba(50,204,51, .7) ;
+}
+#fieldInput {
+	margin-top: 30px;
+}
+#come {
+	width: 612px;
+	height: 164px;
+	top: 184px;
+	left: 164px;
+	background-color: rgba(255, 51,51, .6);
+}
+#dont-come {
+	left: 164px;
+	background-color: rgba(255, 51,51, .6);
+}
+.place {
+	width: 122px;
+	height: 137px;
+	top: 44px;
+	background-color: rgba(255, 51,51, .6);
+}
+#four {
+	left: 288px;
+}
+#five {
+	left: 412px;
+}
+#six {
+	left: 535px;
+}
+#eight {
+	left: 655px;
+}
+#nine {
+	left: 778px;
+}
+#ten {
+	left: 900px;
+}
+.roll-area {
+	border-bottom: 6px solid  #f0c427;
+	border-radius: 10px;
+	margin-top: 20px;
+	background: url(images/gradient.jpg);
+	background-size: cover;
+	background-repeat:no-repeat;
+}
+.dice-total {
+	margin-top: 28px;
+	margin-right: 10px;
+}
+.ui {
+	font-family: Verdana;
+	min-height: 150px;
+	border:3px solid  #f0c427;
+	border-bottom: none;
+	color: #090;
+	font-weight: bold;
+	text-shadow: 1px 1px black;
+	padding-top: 10px;
+}
+@media(min-width: 992px){
+	.ui {
+		height: 400px;
+	}
+}
+.money {
+	color: #fff;
+}
+.outcome-log {
+	text-align: center;
+	font-size: 30px;
+}
+.point-set {
+	color: #fff;
+	margin: 5px;
+	text-align: center;
+}
+.point-value {
+	color: #3af;
+}
+/* --------------- HUD -------------------------*/
+.money, .dice, .other {
+	min-height: 120px;
+}
+
+
+
+
+
+/* --------------- layout test -----------------*/
+.overall-container {
+	/*background-image: url('table-layout.jpg');*/
+	background-size:100% auto;
+	background-repeat: no-repeat;
+	background-color: rgba(130,110,80,.9);
+	border-radius: 15px;
+	padding-bottom: 30px;
+	padding-left: 50px;
+	overflow: hidden;
+}
+
+.placeT {
+	height: 60px;
+}
+.placeB {
+	height: 100px;
+}
+.placeA {
+	height: 40px;
+}
+.allB {
+	height: 421px;
+}
+.placeD {
+	height: 300px;
+}
+.propsA {
+	height: 74px;
+}
+.propsAa {
+	height: 52px;
+}
+.propsY {
+	height: 25px;
+	border: none;
+}
+.placeM {
+	height: 150px;
+}
+.placeF {
+	height: 30px;
+}
+.placeG {
+	height: 30px;
+}
+.six-8 {
+	height: 120px;
+}
+#bigSix, #bigEight {
+	background-color: transparent;
+}
+
+.blank {
+	background: url(images/test.jpg);
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: 100%;
+}
+#dc {
+	background: url(images/dontCome.jpg);
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: 100%;
+}
+#co {
+	background: url(images/come.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#passv {
+	background: url(images/passv.jpg);
+	background-size: cover;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+#Fie {
+	background: url(images/field.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#dpv {
+	background: url(images/dontpassv.jpg);
+	background-size: cover;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+#d-odds-vert {
+	background: url(images/oddsVert.jpg);
+	background-size: cover;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+#p-odds-vert {
+	background: url(images/oddsVert.jpg);
+	background-size: cover;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+#passh {
+	background: url(images/pass.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#dph {
+	background: url(images/dontPass.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#Pfour {
+	background: url(images/four.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#Pfive {
+	background: url(images/five.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#Psix {
+	background: url(images/six.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#Peight {
+	background: url(images/eight.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#Pnine {
+	background: url(images/nine.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#Pten {
+	background: url(images/ten.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#anySeven {
+	background: url(images/seven.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#Hfour {
+	background: url(images/hard4.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#Hten {
+	background: url(images/hard10.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#Hsix {
+	background: url(images/hard6.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#Height {
+	background: url(images/hard8.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#Zthree {
+	background: url(images/three.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#Yo {
+	background: url(images/eleven.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#Ztwo {
+	background: url(images/two.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#Ztwelve {
+	background: url(images/twelve.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#anyCraps {
+	background: url(images/craps.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#big68 {
+	background: url(images/big68.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+#oddsP, #oddsDP {
+	background: url(images/blankL.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

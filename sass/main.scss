@@ -176,7 +176,9 @@ header {
     text-align: center;
     font-family: $headFont;
     border-bottom: 1px solid $mainColor;
-
+} 
+.headline {
+    font-family: $headFont;
 }
 .showcase {
     width: 80%;
@@ -188,6 +190,9 @@ header {
 }
 .showcase-img {
     display: inline-block;
+}
+.content-block {
+    overflow: hidden;
 }
 .description {
     font-size: 1.3em;
@@ -201,8 +206,17 @@ header {
         width: 95%;
     }
 }
+.about-description {
+    font-size: 1.3em;
+    border-top: 1px solid $mainColor;
+    border-bottom: 1px solid $mainColor;
+    padding-top: 5px;
+}
 .img-normal {
     width: 350px;
+    float: left;
+    border: 1px solid black;
+    border-radius: 6px;
 }
 // --------------------- form --------------------------
 form {

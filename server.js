@@ -26,7 +26,9 @@ app.get('/', function(req, res) {
     res.sendFile('html/shell.html', {root : './public'});
 });
 
-app.get('/api/load', routes.load)
+app.get('/craps', function(req,res) {
+    res.sendFile('html/craps.html', {root : './public'});
+})
 
 app.post('/api/sendEmail', routes.sendEmail)
 
