@@ -179,6 +179,14 @@ header {
 } 
 .headline {
     font-family: $headFont;
+    font-size: 1.6em;
+    border-bottom: 1px solid $mainColor;
+}
+.projects-headline {
+    font-family: $headFont;
+    font-size: 1.6em;
+    text-align: center;
+    margin-top: 20px;
 }
 .showcase {
     width: 80%;
@@ -189,14 +197,16 @@ header {
     margin: 0 auto;
 }
 .showcase-img {
-    display: inline-block;
+    display: block;
+    margin: 5px auto;
 }
 .content-block {
     overflow: hidden;
+    padding: 5px;
 }
 .description {
     font-size: 1.3em;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     text-align: center;
     border-top: 1px solid $mainColor;
@@ -208,15 +218,24 @@ header {
 }
 .about-description {
     font-size: 1.3em;
-    border-top: 1px solid $mainColor;
-    border-bottom: 1px solid $mainColor;
-    padding-top: 5px;
+    margin: 5px;
 }
 .img-normal {
     width: 350px;
     float: left;
     border: 1px solid black;
     border-radius: 6px;
+    margin-right: 7px;
+}
+.links {
+    display: inline-block;
+    width: 33%;
+    font-size: 1.6em;
+    text-align: center;
+    li {
+        list-style: none;
+        color: black;
+    }
 }
 // --------------------- form --------------------------
 form {
