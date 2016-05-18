@@ -30,6 +30,7 @@ a {
 .container-fluid {
     @include backdrop($backColor);
     border-top:1px solid $accentColor;
+    min-height: 80vh;
 } 
 //------------------header ---------------------------
 header {
