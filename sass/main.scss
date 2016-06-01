@@ -10,6 +10,7 @@
 }
 body {
     background-color: $accentColor;
+    min-width: 825px;
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -20,11 +21,9 @@ ul {
 a {
     text-decoration: none;
     color: black;
-    &:hover {
+    &:focus, &:hover, &:active {
         text-decoration: none;
-    }
-    &:active {
-        text-decoration: none;
+        color: black;
     }
 }
 .container-fluid {
@@ -241,6 +240,10 @@ header {
             color: $mainColor;
         }
     }
+}
+.update {
+    color: $accentColor;
+    font-size: 1em;
 }
 // --------------------- form --------------------------
 form {

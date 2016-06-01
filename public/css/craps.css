@@ -353,7 +353,7 @@ button:active {
 	background-size: 100%;
 }
 #passv {
-	background: url(images/passv.jpg);
+	background: url(images/passV.jpg);
 	background-size: cover;
 	background-position:center;
 	background-repeat:no-repeat;
@@ -365,7 +365,7 @@ button:active {
 	background-size: 100%;
 }
 #dpv {
-	background: url(images/dontpassv.jpg);
+	background: url(images/dontPassV.jpg);
 	background-size: cover;
 	background-position:center;
 	background-repeat:no-repeat;
