@@ -16,7 +16,14 @@ app.controller('mainController', ['$scope', '$http', function($scope, $http){
         }
         console.log(email)
         $http.post('/api/sendEmail', email).then(function(returnData){
-            $scope.returnMessage = returnData.data
+            if(returnData.data !== 'err'){
+                $scope.name = '';
+                $scope.email = '';
+                $scope.message = '';
+                $scope.returnMessage = returnData.data;
+            } else {
+                $scope.returnMessage = "Opps, something went wrong. Please try again later";
+            }
         })
     }
 

@@ -8,9 +8,14 @@
     box-sizing: border-box;
     font-size: 12px;
 }
+html {
+    width: 100%;
+    min-width: 385px;
+}
 body {
+    width: 100%;
     background-color: $accentColor;
-    min-width: 825px;
+    min-width: 385px;
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -24,6 +29,7 @@ a {
     &:focus, &:hover, &:active {
         text-decoration: none;
         color: black;
+        outline: 0;
     }
 }
 .container-fluid {
@@ -48,13 +54,13 @@ header {
     margin: 0 0 15px 60px;
 }
 .logo-spin {
-    @media(max-width: 700px){
+    @media(max-width: 385px){
         display: none;
     }
 }
 .logo { 
-    width: 120px;
-    height: 120px;
+    width: 116px;
+    height: 116px;
     margin: 5px 0; 
     border-radius: 60px;
 }
@@ -94,6 +100,10 @@ header {
     position: relative;
     z-index: 4;
     background-color: #fff;
+    @media(max-width: 510px) {
+        width: 100%;
+        padding-left: 0;
+    }
 }
 .nav-item {
     float: left;
@@ -105,6 +115,9 @@ header {
         background-color: $mainColor;
         color: #fff;
     }
+    @media(max-width: 600px){
+        padding: 0 8px;
+    }
 }
 .triangle-right {
     float: right;
@@ -112,6 +125,9 @@ header {
     height: 0;
     position: absolute;
     z-index: 1;
+    @media(max-width: 510px) {
+        display:none;
+    }
 }
 #tri-front {
     border-top: 14px solid transparent;
@@ -131,6 +147,9 @@ header {
     margin: 30px auto;
     background-color: #fff;
     overflow: hidden;
+    @media(max-width: 800px) {
+        width: 90%;
+    }
 }
 .semi-circle {
     width: 20px;
@@ -166,9 +185,11 @@ header {
     width: 85%;
     margin: 20px auto;
     background-color: darken($subtleColor, 5%);
-    // border: 1px solid black;
     box-shadow: 0 0 2px 1px black;
     padding: 5px;
+    @media(max-width: 800px) {
+        width: 98%;
+    }
 }
 .section-title {
     width: 350px;
@@ -229,16 +250,22 @@ header {
 }
 .links {
     display: inline-block;
-    width: 33%;
+    width: 32%;
     font-size: 1.6em;
     text-align: center;
+    color: $mainColor;
+    font-weight: bold;
     li {
         list-style: none;
         color: black;
         font-size: 1.3em;
+        font-weight: normal;
         &:hover {
             color: $mainColor;
         }
+    }
+    @media(max-width: 500px){
+        width: 100%;
     }
 }
 .update {
@@ -253,6 +280,9 @@ form {
     border: 1px solid black;
     background-color: $subtleColor;
     padding-bottom: 10px;
+    @media(max-width: 500px) {
+        width: 95%;
+    }
 }
 label, input, textarea {
     display: block;
@@ -280,6 +310,7 @@ footer{
     height: 50px;
     background-color: $accentColor;
     border-top: 1px solid $backColor;
+    padding-right: 15px;
 }
 .icon {
     height: 40px;

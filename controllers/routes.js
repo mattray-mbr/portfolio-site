@@ -9,7 +9,7 @@ function sendEmail(req, res){
     email.setSubject(req.body.name);
     email.setHtml(req.body.message);
     sendgrid.send(email, function(err, doc){
-        if(err){res.send('oops, something went wrong, please try again later')}
+        if(err){res.send('err')}
         res.send('your email was sent successfully') 
     });
 }
